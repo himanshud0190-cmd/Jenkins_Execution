@@ -37,7 +37,7 @@ public class Hooks
 		 System.out.println("Browser received from Maven is = "+MavenBrowser);
 		 
 		 driver = DF.InitializeBrowser(PropertyBrowser);
-	//	driver.manage().window().maximize();
+		 driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
