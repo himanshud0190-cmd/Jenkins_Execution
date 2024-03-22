@@ -26,7 +26,17 @@ public class Hooks
 	public static void OpenBrowser() throws IOException
 	{
 		 DF = new DriverFactory();
-		 driver = DF.InitializeBrowser(Utility.PropertyFile("Browser"));
+		 
+		 String PropertyBrowser = Utility.PropertyFile("Browser");
+		 String MavenBrowser = System.getProperty("CliBrowser");
+		 
+		 if(MavenBrowser != null)
+		 {
+			 PropertyBrowser = MavenBrowser;
+		 }
+		 System.out.println("Browser received from Maven is = "+MavenBrowser);
+		 
+		 driver = DF.InitializeBrowser(PropertyBrowser);
 	//	driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
