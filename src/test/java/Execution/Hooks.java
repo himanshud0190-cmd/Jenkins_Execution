@@ -22,7 +22,7 @@ public class Hooks
 	static WebDriver driver;
 	static DriverFactory DF;
 	
-	@BeforeAll
+	@BeforeAll //(User @BeforeAll hook for to open the browser only for one time)
 	public static void OpenBrowser() throws IOException
 	{
 		 DF = new DriverFactory();
@@ -54,7 +54,7 @@ public class Hooks
 		
 	}
 	
-	@AfterAll
+	@AfterAll //Use @AfterAll for to close the browser only for one time after all execution of scenario is completed
 	public static void CloseBrowser() throws IOException
 	{
 		driver.quit();
