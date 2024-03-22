@@ -57,7 +57,7 @@ public class Hooks
 	@AfterAll
 	public static void CloseBrowser() throws IOException
 	{
-		driver.close();
+		driver.quit();
 		Desktop.getDesktop().browse(new File("test-output\\SparkReport\\Index.html").toURI());
 		System.out.println("Automatically Opening the Extent Report after running the project");
 	}
