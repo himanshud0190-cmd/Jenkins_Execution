@@ -19,6 +19,7 @@ public class Pom
 	@FindBy (id = "pushDenied") private WebElement clickingPopup;
 	@FindBy ( xpath = "(//img[@title='Snapdeal'])[1]") private WebElement verifyingLogo;
 	@FindBy(xpath = "//iframe[@id='loginIframe']") private WebElement Frame;
+	@FindBy(xpath = "//i[@class='sd-icon sd-icon-cart-icon-white-2']") private WebElement verifyingCarIcon;
 	
 	public Pom(WebDriver driver)
 	{
@@ -35,6 +36,12 @@ public class Pom
 		clickingPopup.click();
 		boolean Logo = verifyingLogo.isDisplayed();
 		return Logo;
+	}
+	
+	public boolean VerifyCartIcon()
+	{
+		boolean Icon = verifyingCarIcon.isDisplayed();
+		return Icon;
 	}
 	
 	

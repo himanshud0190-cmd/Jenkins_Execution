@@ -5,13 +5,13 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
 (
-		features = {"src\\test\\resources\\FeatureFiles\\HYR.feature"},
+		features = {"src\\test\\resources\\FeatureFiles\\Snapdeal.feature"},
 		
 		glue = {"Execution"},
 		
 		publish = true,
 		
-		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		
 )
 

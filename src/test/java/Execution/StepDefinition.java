@@ -30,5 +30,12 @@ public class StepDefinition
 		boolean Logo = pom.VerifyLogo();
 		Assert.assertTrue(Logo);
 	}
+	
+	@Then("User should be able to see Cart Icon on the Home page")
+	public void UsershouldbeabletoseeCartIconontheHomepage()
+	{
+		boolean CartIcon = pom.VerifyCartIcon();
+		Assert.assertTrue(CartIcon);
+	}
 
 }

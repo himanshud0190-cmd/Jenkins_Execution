@@ -27,7 +27,7 @@ public class Hooks
 	{
 		 DF = new DriverFactory();
 		 driver = DF.InitializeBrowser(Utility.PropertyFile("Browser"));
-		driver.manage().window().maximize();
+	//	driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
