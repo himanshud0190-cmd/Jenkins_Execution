@@ -44,13 +44,13 @@ public class Hooks
 	@After
 	public void CaptureScreenshot(Scenario scenario)
 	{
-		if(scenario.isFailed())
-		{
+//		if(scenario.isFailed())
+//		{
 			String Name = scenario.getName();
 			Name.replaceAll(" ", "_");
 			byte[] Screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(Screenshot, "image/png", Name);
-		}
+//		}
 		
 	}
 	
