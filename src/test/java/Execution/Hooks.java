@@ -41,6 +41,7 @@ public class Hooks
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
+	
 	@After
 	public void CaptureScreenshot(Scenario scenario)
 	{
