@@ -1,3 +1,7 @@
 Execution\Hooks.class
 Execution\Runner.class
 Execution\StepDefinition.class
+Execution\WindowHandleExample.class
+Execution\BubbleSortExample.class
+Execution\Palindrome.class
+Execution\RotateArray.class
