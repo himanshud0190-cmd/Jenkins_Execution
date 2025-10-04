@@ -41,10 +41,6 @@ public class Hooks
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
-	
-	
-	
-	
 	@After
 	public void CaptureScreenshot(Scenario scenario)
 	{
@@ -65,7 +61,5 @@ public class Hooks
 		Desktop.getDesktop().browse(new File("test-output\\SparkReport\\Index.html").toURI());
 		System.out.println("Use of Line number 61 is for to open Extent Report automatically after running the project");
 	}
-	
-	
 	
 }
